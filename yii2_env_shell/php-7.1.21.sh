@@ -68,14 +68,16 @@ chmod +x /etc/init.d/php-fpm
 echo "Install PHP-redis扩展"
 cd /data/src
 yum -y install autoconf
-tar zxvf redis-4.0.2.tgz
-cd redis-4.0.2 && /usr/local/php/bin/phpize && ./configure --with-php-config=/usr/local/php/bin/php-config && make && make install
+wget http://pecl.php.net/get/redis-5.0.2.tgz
+tar zxvf redis-5.0.2.tgz
+cd redis-5.0.2 && /usr/local/php/bin/phpize && ./configure --with-php-config=/usr/local/php/bin/php-config && make && make install
 
 echo "安装ImageMagick扩展"
 yum -y install ImageMagick ImageMagick-devel
 cd /data/src/
-tar zxvf imagick-3.4.3.tgz
-cd imagick-3.4.3
+wget http://pecl.php.net/get/imagick-3.4.4.tgz
+tar zxvf imagick-3.4.4.tgz
+cd imagick-3.4.4
 /usr/local/php/bin/phpize
 ./configure --with-php-config=/usr/local/php/bin/php-config --with-imagick
 make && make install
