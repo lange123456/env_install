@@ -24,7 +24,7 @@ cd /data/src/ && ./nginx.sh
 # 启动停止脚本
 service nginx start|stop|restart
 ```
-##### 安装 redis-3.2.11 #####
+##### 安装 redis-5.0.5 #####
 ```shell
 cd /data/src/ && ./redis.sh
 # 启动停止脚本
