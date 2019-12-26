@@ -7,7 +7,7 @@ cd /data/src
 #git clone https://github.com/openresty/echo-nginx-module.git
 wget http://nginx.org/download/nginx-1.17.7.tar.gz
 tar zxvf nginx-1.17.7.tar.gz
-cd /data/src/nginx-1.17.7.tar.gz
+cd /data/src/nginx-1.17.7
 ./configure \
 --prefix=/data/local/nginx \
 --with-http_ssl_module \
