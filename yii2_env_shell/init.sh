@@ -36,6 +36,12 @@ echo "安装依赖包"
 # 会安装 日志切割 软件 logrotate 以及 监控 monit
 yum -y install lrzsz gcc-c++ vim wget zlib-devel openssl-devel ncurses-devel bison curl curl-devel libxml2-devel gd gd-devel gmp-devel libjpeg libpng freetype libjpeg-devel libpng-devel freetype-devel  libmcrypt libmcrypt-dev unzip zip pcre pcre-devel zlib* openssl-devel lua* GeoIP* telnet telnet-server logrotate monit
 
+# ffmpeg
+yum -y install epel-release
+rpm -v --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
+rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+yum -y install ffmpeg ffmpeg-devel
+
 echo '* soft nofile 65535'>>/etc/security/limits.conf
 echo '* hard nofile 65535'>>/etc/security/limits.conf
 
