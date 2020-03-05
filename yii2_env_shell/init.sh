@@ -11,11 +11,10 @@ setenforce 0
 echo "系统时间设置"
 timedatectl set-timezone Asia/Shanghai
 timedatectl status
+timedatectl set-local-rtc 1
+timedatectl set-ntp yes
 yum -y install rdate ntpdate
 
-echo "时间更新脚本建立"
-echo  "*/3 * * * * rdate -t 60 -s stdtime.gov.hk >> /dev/null" >> /var/spool/cron/root
-echo  "*/10 * * * * ntpdate time.nist.gov >> /dev/null" >> /var/spool/cron/root
 
 echo "目录建立"
 
