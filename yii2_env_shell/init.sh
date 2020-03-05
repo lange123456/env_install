@@ -13,7 +13,10 @@ timedatectl set-timezone Asia/Shanghai
 timedatectl status
 timedatectl set-local-rtc 1
 timedatectl set-ntp yes
+
 yum -y install rdate ntpdate
+
+echo  "*/10 * * * * ntpdate ntp1.aliyun.com >> /dev/null" >> /var/spool/cron/root
 
 
 echo "目录建立"
