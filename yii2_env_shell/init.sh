@@ -9,10 +9,11 @@ sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 setenforce 0
 
 echo "系统时间设置"
+yum install -y ntp
 timedatectl set-timezone Asia/Shanghai
-timedatectl status
-timedatectl set-local-rtc 1
+timedatectl set-local-rtc 0
 timedatectl set-ntp yes
+timedatectl status
 
 yum -y install rdate ntpdate
 
